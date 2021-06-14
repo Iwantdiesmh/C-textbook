@@ -32,5 +32,5 @@ int main() {
 
 	/* okay end of copy and paste */
 	
-	cout << intarray[0] << ", " << intarray[1] << ", " << intarray[2]; //okay it's broken again but it's 6:22 and I'll ask during class or come back if I have time
+	cout << intarray[0] << ", " << intarray[1] << ", " << intarray[2];
 }
