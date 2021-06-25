@@ -1,0 +1,4 @@
+                catch (exception const& e) {
+                        cout << "Message: " << e.what() << "\n";
+                        cout << "Type: " << typeid(e).name() << "\n";
+                }
