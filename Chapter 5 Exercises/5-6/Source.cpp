@@ -9,12 +9,12 @@ int main() {
 		double number;
 		cout << "Input a celcius amount: ";
 		cin >> number;
-		cout << number << " celsius is equal to " << (number * 9 / 5) + 32 << " fahrenheit";
+		cout << number << " celsius is equal to " << (number * 9 / 5) + 32 << " fahrenheit" << endl;
 	}
 	if (input == "f") {
 		double number;
 		cout << "Input a fahrenheit amount: ";
 		cin >> number;
-		cout << number << " fahrenheit is equal to " << (number - 32) * 5 / 9 << " celcius";
+		cout << number << " fahrenheit is equal to " << (number - 32) * 5 / 9 << " celcius" << endl;
 	}
 }

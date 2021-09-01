@@ -40,7 +40,7 @@ double ctok(double c) {
 }
 
 double ktoc(double k) {
-	double c = k = 273.15;
+	double c = k - 273.15;
 	return c;
 }
 
