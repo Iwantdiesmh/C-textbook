@@ -9,32 +9,17 @@ void function(string label, vector<int> number) {
 	}
 }
 
-/*
 void fibonacci(int x, int y, vector<int> v, int n) { //x and y are the starting digits, v is the vector and n is the amount of numbers in v. 
 	int previous, sum;
 	previous = x;
 	sum = y;
-	v.push_back(x);
-	v.push_back(y);
-	for (int i = 0; i < n-2; i++) {
-		v.push_back(previous + sum);
-		previous = sum;
-		sum = previous + sum;
-	}
-	function("Fibbonacci Sequence",v);
-}
-*/
-
-void fibonacci(int x, int y, vector<int> v, int n) { //x and y are the starting digits, v is the vector and n is the amount of numbers in v. 
-	int previous, sum;
-	previous = x;
-	sum = y;
-	v.push_back(x);
+	v.push_back(x); 
 	v.push_back(y);
 	for (int i = 0; i < n - 2; i++) {
 		v.push_back(previous + sum);
+		int temp = previous;
 		previous = sum;
-		sum = previous + sum;
+		sum = temp + sum;
 	}
 	function("Fibbonacci Sequence", v);
 }
