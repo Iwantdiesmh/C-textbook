@@ -1,48 +1,13 @@
 #include<iostream>
 #include<vector>
-#include<ctype.h>
+#include<string>
 using namespace std;
 
-class Book {
-private:
-	string isbn;
-	string title;
-	string author;
-	string copyrightdate;
+#include "library.h"
 
-public:
-	string return_isbn() {
-		return isbn;
-	}
-	string return_title() {
-		return title;
-	}
-	string return_author() {
-		return author;
-	}
-	string return_copyright() {
-		return copyrightdate;
-	}
-	void input(Book bookadd) {
-		string response;
-		cout << "What is thie isbn of the book? (n-n-n-x)" << endl;
-		cin >> response;
-		//here <-
-
-		bookadd.isbn = response;
-		cout << "What is thie title of the book?" << endl;
-		cin >> response;
-		bookadd.title = response;
-		cout << "Who is thie author of the book?";
-		cin >> response;
-		bookadd.author = response;
-		cout << "What is thie copyright date of the book? (mm/dd/yy)";
-		cin >> response;
-		bookadd.copyrightdate = response;
-	}
-
-};
-
-int main() {
-
+int main() { //haven't added any code yet because not really sure how to set this up, so basically I'm not too sure if the code works. It compiles but we'll see if it functions
+	Library statefarm_library;
+	statefarm_library.add_patron();
+	statefarm_library.add_book();
+	statefarm_library.checkout();
 }

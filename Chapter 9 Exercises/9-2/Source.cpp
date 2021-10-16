@@ -11,18 +11,46 @@ private:
 public:
 	void read_names() {
 		string current_name;
-		cout << "Enter names and type done with you've finished." << endl;
+		cout << "Enter names and type done when you've finished." << endl;
 		cin >> current_name;
 		while (current_name != "done" && current_name != "Done") {
+			/*if () { see below
+
+			}*/
 			name.push_back(current_name);
 			cin >> current_name;
 		}
 	};
 	void read_ages();
-	void print();
 	void v_sort();
+	vector<string> get_names() {
+		return name;
+	}
+	vector<double> get_age() {
+		return age;
+	}
+
+	//not sure I know how to write this without breaking every == down the line
+
+	bool operator==(string compare) { 
+		bool match = false;
+		for (int i = 0; i < name.size(); i++) {
+			if (name[i] == compare) {
+				match = true;
+			}
+		}
+		return match;
+	}
 
 };
+
+void operator<<(Name_pairs print, int e) { //I dont need a second parameter so I'm not sure what do use it for. 
+	vector<string> names = print.get_names();
+	vector<double> ages = print.get_age();
+	for (int i = 0; i < names.size(); i++) {
+		cout << names[i] << "," << ages[i] << endl;
+	}
+}	
 
 void Name_pairs::read_ages() {
 	for (int i = 0; i < name.size(); i++) {
@@ -50,16 +78,11 @@ void Name_pairs::v_sort() { //stole this from 8-7, but if the names they made me
 	age = sorted_age;
 }
 
-void Name_pairs::print() {
-	for (int i = 0; i < name.size(); i++) {
-		cout << name[i] << "," << age[i] << endl;
-	}
-}
 
 int main() {
 	Name_pairs my_class;
 	my_class.read_names();
 	my_class.read_ages();
 	my_class.v_sort();
-	my_class.print();
+	my_class << 1;
 }

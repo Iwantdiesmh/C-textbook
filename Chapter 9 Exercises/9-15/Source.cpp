@@ -17,7 +17,7 @@ public:
 		return money;
 	}
 	void print() {
-		double scale = 00.1; //can't get this to work for some reason
+		double scale = 0.01; //can't get this to work for some reason
 		double value = floor(money / scale + 0.5) * scale;
 		cout << "That is $" << value << "." << endl;
 	}
