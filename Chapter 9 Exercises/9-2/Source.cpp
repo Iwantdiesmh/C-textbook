@@ -30,17 +30,6 @@ public:
 		return age;
 	}
 
-	//not sure I know how to write this without breaking every == down the line
-
-	bool operator==(string compare) { 
-		bool match = false;
-		for (int i = 0; i < name.size(); i++) {
-			if (name[i] == compare) {
-				match = true;
-			}
-		}
-		return match;
-	}
 
 };
 

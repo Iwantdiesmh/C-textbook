@@ -10,4 +10,5 @@ int main() { //haven't added any code yet because not really sure how to set thi
 	statefarm_library.add_patron();
 	statefarm_library.add_book();
 	statefarm_library.checkout();
+	statefarm_library.checkin();
 }

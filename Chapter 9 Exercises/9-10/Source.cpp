@@ -9,7 +9,7 @@ public:
 };
 
 bool Date::leapyear(int y) {
-	return (y % 4 == 0 && y % 400 != 0); //if it's divisible by 4 it's a leap but, but if it's divisble by 400 then it isn't
+	return (y % 4 == 0 && y % 400 == 0); //if it's divisible by 4 it's a leap but, but if it's divisble by 400 then it isn't
 }
 
 int main() {

@@ -30,15 +30,13 @@ public:
 	void input() {
 		string response;
 		cout << "----Adding Book----" << endl;
-		cout << "line before " << endl;
-		cout << "What is thie isbn of the book? (n-n-n-x)" << endl;
+		cout << "What is the isbn of the book? (n-n-n-x)" << endl;
 		getline(cin, isbn);
-		cout << "isbn = " << isbn << endl;
-		cout << "What is thie title of the book?" << endl;
+		cout << "What is the title of the book?" << endl;
 		getline(cin, title);
-		cout << "Who is thie author of the book?" << endl;
+		cout << "Who is the author of the book?" << endl;
 		getline(cin, author);
-		cout << "What is thie copyright date of the book? (mm/dd/yy)" << endl;
+		cout << "What is the copyright date of the book? (mm/dd/yy)" << endl;
 		getline(cin, copyrightdate);
 		cout << "What is the genre of this book?" << endl;
 		getline(cin, response);
@@ -63,15 +61,14 @@ public:
 		return name;
 	}
 	void add_user() {
+		string dont_care;
 		cout << "---Adding user----" << endl;
 		cout << "What's your name?" << endl;
 		getline(cin, name);
-		cout << "Name  = " << name << endl;
 		cout << "What is your id?" << endl;
 		cin >> id;
-		cout << "Id = " << id << endl;
+		getline(cin, dont_care);
 		cout << "\n";
-		//no idea how to set fee so for now it's going to be default 0
 	}
 	bool is_fee() {
 		return (fee != 0);

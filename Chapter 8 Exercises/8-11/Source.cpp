@@ -13,7 +13,7 @@ struct vector_elements
 
 int maxv(vector<int> any) {
 	int element = any[1];
-	for (int i = 1; i < any.size(); i++) {
+	for (unsigned int i = 1; i < any.size(); i++) {
 		if (any[i] > element) {
 			element = any[i];
 		}
@@ -38,12 +38,13 @@ int median(vector<int> any) {
 }
 
 int mean(vector<int> any) {
-	double total;
-	for (int i = 0; i < any.size(); i++) {
+	double total = 0;
+	double anydbl = any.size() * 1.0;
+	for (unsigned int i = 0; i < any.size(); i++) {
 		total += any[i];
 	}
 
-	return (total / any.size());
+	return (total / anydbl);
 }
 
 int main() {
@@ -57,7 +58,7 @@ int main() {
 	test.median = vector_median;
 	test.mean = vector_mean;
 
-	cout << test.largest_element;
-	cout << test.median;
-	cout << test.mean;
+	cout << "The largest element of this list is: " << test.largest_element << endl;
+	cout << "The median of this list is: " << test.median << endl;
+	cout << "The mean of this list is: " << test.mean << endl;
 }
