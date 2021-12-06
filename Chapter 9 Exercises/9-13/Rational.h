@@ -44,7 +44,7 @@ public:
 		tn2 = n2 * d1;
 		td = d1 * d2;
 
-		rn = tn1 + tn2; 
+		rn = tn1 + tn2;
 		rd = td;
 		cout << rn << "/" << rd << endl;
 

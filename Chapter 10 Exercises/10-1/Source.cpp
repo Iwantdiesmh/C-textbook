@@ -16,8 +16,9 @@ int main() {
 		if (ist.eof())
 			break;
 
-		cout << n << endl;
-		total >> n;
+		total += n;
+
 	}
+	cout << "Total  = " << total << endl;
 	ist.close();
 }

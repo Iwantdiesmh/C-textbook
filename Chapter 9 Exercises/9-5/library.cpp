@@ -59,9 +59,16 @@ void Library::checkout() { //checksouts books
 		current.set_date(date);
 		transactions.push_back(current);
 	}
-	else {
-		cout << "Name or Book not matching" << endl;
+	else if (matching_name) {
+		cout << "Book not matching" << endl;
 	}
+	else if (matching_book) {
+		cout << "Book not matching" << endl;
+	}
+	else{
+		cout << "Book and Name not matching" << endl;
+	}
+
 	books.erase(books.begin() + matching_book - 1); //then removes the book from the library
 	cout << "\n";
 }
@@ -72,14 +79,22 @@ void Library::checkin() { //checks in books
 	cout << "Who is checking in their books?" << endl;
 	getline(cin, name);
 	bool matching_name = false;
-	int user_number;
+	int user_number = -1;
 	if (transactions.size() != 0) {
 		for (int i = 0; i < transactions.size(); i++) { //checks if the name that wants to check in matches with any of the patrons
 			if (patrons[i].get_name() == name) {
 				matching_name = true;
 				user_number = i;
 			}
+
+			if (user_number == -1) {
+				cout << "There is no user." << endl;
+				break;
+			}
+
 		}
+		
+
 
 		if (matching_name == true) { //if it does, it checks for all the transactions it has with the persons name and then adds the book back into the library and deletes the transactions
 			for (unsigned int i = 0; i < transactions.size(); i++) {
@@ -90,9 +105,6 @@ void Library::checkin() { //checks in books
 			}
 		}
 
-		else {
-			cout << "this user is not registered in the library." << endl;
-		}
 	}
 	else {
 		cout << "There are no transcations";
